@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Botão Yu-Gi-Oh!</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="/home.html">Início</a></li>
+            <li><a href="/videos.html">Videos</a></li>
+            <li><a href="/contato.html">Contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="formulario-yugioh">
+        <h2>Entre em Contato</h2>
+        <form id="meuFormulario">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" required></textarea>
+            <button type="button" id="submit">Enviar</button>
+        </form>
+    </div>
+
+    <div id="dados-digitados-popup" style="display: none;">
+        <h2>Dados Digitados</h2>
+        <p><strong>Nome:</strong> <span id="popup-nome"></span></p>
+        <p><strong>Email:</strong> <span id="popup-email"></span></p>
+        <p><strong>Mensagem:</strong> <span id="popup-mensagem"></span></p>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#submit").click(function() {
+                const nome = $("#nome").val();
+                const email = $("#email").val();
+                const mensagem = $("#mensagem").val();
+
+                $("#popup-nome").text(nome);
+                $("#popup-email").text(email);
+                $("#popup-mensagem").text(mensagem);
+
+                $("#dados-digitados-popup").dialog({
+                    modal: true,
+                    width: 400,
+                    buttons: {
+                        Fechar: function() {
+                            $(this).dialog("close");
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+
+
+<script>
+    
+    const botaoEnviar = document.getElementById("submit");
+    botaoEnviar.addEventListener("click", function() {
+        botaoEnviar.style.backgroundColor = "#800080"; /* Roxo Yu-Gi-Oh! */
+    });
+</script>
+    
+<div class="formulario-yugioh">
+    <label for="num1">Num1:</label>
+    <input type="number" id="num1" name="num1" required>
+
+    <label for="idade">Num2:</label>
+    <input type="number" id="num2" name="num2" required>
+
+    <label for="Resultado">Resultado:</label>
+    <span id="resultado"></span>
+
+    <button type="button" id="somar">Calcular</button>
+
+</div>
+
+<script>
+    $(document).ready(function() {
+        $("#somar").click(function() {
+            
+            var num1 = parseFloat($("#num1").val());
+            var num2 = parseFloat($("#num2").val());
+
+            if (!isNaN(num1) && !isNaN(num2)) {
+                
+                var resultado = num1 + num2;
+
+                
+                $("#resultado").text(resultado);
+            } else {
+            
+                $("#resultado").text("Valores inválidos");
+            }
+        });
+    });
+</script>
+    
+    
+
+    
+
+    
+
+    
+    
+</body>
+</html>

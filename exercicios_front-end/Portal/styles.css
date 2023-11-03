@@ -1,0 +1,112 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #ff9900; /* Laranja Yu-Gi-Oh! */
+    text-align: center;
+    padding: 15px 0;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 90px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    background-color: #ff9900; /* Laranja Yu-Gi-Oh! */
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    font-size: 50px;
+}
+
+.navbar a:hover {
+    background-color: #000; 
+    color: #ff9900;
+}
+
+
+
+
+.div-yugioh {
+    background-color: #983de26b; 
+    color: #fdfdfd;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.div-yugioh h2 {
+    font-size: 24px;
+}
+
+.div-yugioh p {
+    font-size: 20px;
+}
+
+
+
+
+/*formulario*/
+
+.formulario-yugioh {
+    background-color: #746a5d75; 
+    color: #f8f8f8;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 30px;
+}
+
+.formulario-yugioh h2 {
+    font-size: 34px;
+}
+
+.formulario-yugioh form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario-yugioh label {
+    margin: 10px 0;
+}
+
+.formulario-yugioh input,
+.formulario-yugioh textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.formulario-yugioh button {
+    background-color: #000; 
+    color: #ff9900; 
+    padding: 10px 150px;
+    border: none;
+    border-radius: 400px;
+    cursor: pointer;
+    font-size: 20px;
+    margin-top: 15px;
+
+    
+}
